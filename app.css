@@ -1,0 +1,9 @@
+.current-section {background:url('images/bg.jpg') no-repeat bottom center; background-size:cover; background-attachment:fixed;}
+.current-temp {font-size:2rem;}
+.current-weather {font-size:24px;}
+
+.vh-100 {height:100vh;}
+.table td, .table th {vertical-align:middle;}
+input, .btn {border-radius:0 !important;}
+
+.flex-item-1 {flex:1;}

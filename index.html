@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta/css/bootstrap.min.css">
+    <link rel="stylesheet" href="app.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular.min.js"></script>
+    <script src="app.js"></script>
+</head>
+<body>
+    <!-- <navbar> component -->
+
+    <section class="search-section">
+        <div class="container">
+            <div class="row">
+                <div class="vh-100 col-12 d-flex flex-column justify-content-center">
+                    <div class="display-4 text-center">Search For Weather</div>
+
+                    <!-- <search> component -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="current-section">
+        <h1 class="sr-only">Current Weather</h1>
+        <div class="container">
+            <div class="row">
+                <div class="vh-100 col-12 d-flex flex-column align-items-center justify-content-center">
+                    <div>Current Conditions</div>
+                    
+                    <!-- <current-weather> component -->
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="bg-dark text-light pt-4 pb-4">
+        <h1 class="sr-only">Forecast</h1>
+
+        <header class="bg-dark text-light mb-4">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 display-4">24-Hr Forecast</div>
+                </div>
+            </div>
+        </header>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <!-- <forecast-item> component -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>
