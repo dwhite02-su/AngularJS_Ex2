@@ -13,22 +13,23 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular.min.js"></script>
     <script src="app.js"></script>
 </head>
-<body>
-    <!-- <navbar> component -->
+<body ng-app="weather">
+    <navbar></navbar>
 
-    <section class="search-section">
+    <section class="search-section" ng-if="$root.displayWeather == false">
         <div class="container">
             <div class="row">
                 <div class="vh-100 col-12 d-flex flex-column justify-content-center">
                     <div class="display-4 text-center">Search For Weather</div>
 
                     <!-- <search> component -->
+                    <search></search>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="current-section">
+    <section class="current-section" ng-if="$root.displayWeather == true">
         <h1 class="sr-only">Current Weather</h1>
         <div class="container">
             <div class="row">
@@ -36,12 +37,13 @@
                     <div>Current Conditions</div>
                     
                     <!-- <current-weather> component -->
+                    <current-weather></current-weather>
                 </div>
             </div>
         </div>
     </section>
     
-    <section class="bg-dark text-light pt-4 pb-4">
+    <section class="bg-dark text-light pt-4 pb-4" ng-if="$root.displayWeather == true">
         <h1 class="sr-only">Forecast</h1>
 
         <header class="bg-dark text-light mb-4">
@@ -52,10 +54,11 @@
             </div>
         </header>
 
-        <div class="container">
+        <div class="container" ng-controller="forecatCtrl">
             <div class="row">
-                <div class="col-12">
+                <div class="col-12" ng-repeat="forecast in forecast">
                     <!-- <forecast-item> component -->
+                    <forecast-item data="forecast"></forecast-item>
                 </div>
             </div>
         </div>
