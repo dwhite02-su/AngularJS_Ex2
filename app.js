@@ -84,10 +84,10 @@ app.component('currentWeather', {
 
 //Controller for Current Weather Component
 app.controller('currentWeatherCtrl', function ($http, $scope, $rootScope) {
-    $scope.current;
+    $scope.current,
  
     $http({
-        url: 'http://api.openweathermap.org/data/2.5/weather',
+        url: 'https://api.openweathermap.org/data/2.5/weather',
         method: 'GET',
         params: {
             'appid': $rootScope.key,
@@ -107,7 +107,7 @@ app.controller('forecastCtrl', function ($http, $scope, $rootScope) {
     $scope.forecast;
 
     $http({
-        url: 'http://api.openweathermap.org/data/2.5/forecast',
+        url: 'https://api.openweathermap.org/data/2.5/forecast',
         method: 'GET',
         params: {
             'appid': $rootScope.key,
